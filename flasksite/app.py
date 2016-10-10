@@ -63,11 +63,9 @@ def logout():
 def services():
     username = flask.request.args.get('username')
     values = flask.request.args.get('services')
-    print '111111111'+str(values)
     if services is None:
         return flask.abort(404, "Usage /hma/portal/sevices/")
     service_list = values.split(",") # change string in list of checkbox values
-    print '2222'+str(service_list)
     status = modules.services(username,values)
 
     return flask.Response(json.dumps(status), mimetype='application/json')
