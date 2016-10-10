@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Site Properties -->
+        <title>Vortex - Hosting Landing Page</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon.png">
+
+        <!-- Google Fonts -->
+       
+        <link rel="stylesheet" href="css/uikit.css">
+		<link rel="stylesheet" href="css/components/small-icon.css">
+		<link rel="stylesheet" href="css/components/slider.css">
+		<link rel="stylesheet" href="css/components/slidenav.css">        
+        <link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/mediaquery.css">
+		 <link href="css/font_family.css" rel="stylesheet" type="text/css">
+        <link href="css/font-family1.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+
+    <body class="layout2">
+
+        <header id="header" class="header2">
+			
+				<!-- sign in modal begin -->
+				<div id="client-area" class="uk-modal">
+					<div class="uk-modal-dialog">
+						<ul id="client-area-tab" class="uk-tab uk-tab-grid" data-uk-tab="{connect:'#account'}">
+							<li class="uk-active uk-width-1-2"><a href="">Sign in</a></li>
+							<li class="uk-width-1-2"><a href="">New account</a></li>
+						</ul>
+
+						<ul id="account" class="uk-switcher uk-margin">
+							<li>
+								<form id="signin-account" class="uk-form">
+									<fieldset>
+										<div class="uk-form-icon">
+											<i class="uk-icon-envelope"></i>
+											<input type="text" placeholder="Email">
+										</div>                                                    
+										<div class="uk-form-icon">
+											<i class="uk-icon-key"></i>
+											<input type="text" placeholder="Password">
+										</div>
+										<label><input type="checkbox">Remember me</label>
+										<a href="#" class="uk-button uk-button-small idz-button-blue uk-width-1-1">Login</a>
+									</fieldset>
+								</form>
+							</li>
+
+							<li>
+								<form id="create-account" class="uk-form">
+									<fieldset>
+										<div class="uk-form-icon">
+											<i class="uk-icon-user"></i>
+											<input type="text" placeholder="Username">
+										</div>
+										<div class="uk-form-icon">
+											<i class="uk-icon-envelope"></i>
+											<input type="text" placeholder="Email">
+										</div>                                                    
+										<div class="uk-form-icon">
+											<i class="uk-icon-key"></i>
+											<input type="text" placeholder="Password">
+										</div>
+										<label><input type="checkbox">I agree to the <a href="#">Terms</a></label>
+										<a href="#" class="uk-button uk-button-small idz-button-blue uk-width-1-1">Create account</a>
+									</fieldset>
+								</form>
+							</li>
+						</ul>
+						<div class="uk-modal-caption">
+							<a href="#">Forgot your password?</a>
+						</div>
+					</div>
+				</div>
+				<!-- sign in modal end -->
+				
+				<!-- start data-uk-sticky -->
+				<div data-uk-sticky="{media:'(min-width: 1024px)', top:-300, animation:'uk-animation-slide-top'}">
+					<div class="uk-container uk-container-center">
+						<div class="uk-grid">
+						   
+							<div class="uk-width-8-10 uk-width-medium-8-10 uk-width-small-1-1">
+							
+								<!-- main logo begin -->
+									<div id="logo">
+										<a href="index.html"><img src="images/logo.svg" alt="vortex"/></a>
+									</div>
+								<!-- main logo end -->
+
+								<!-- mainmenu begin -->
+								<nav id="mainmenu" class="uk-navbar">
+									<div class="uk-navbar-flip">
+										<ul class="uk-navbar-nav uk-hidden-small" data-uk-scrollspy-nav="{closest:'li', smoothscroll:{offset:70}}">
+											<li><a href="#thefeatures">Features</a></li>
+											<li><a href="#thepricing">Pricing</a></li>
+											<li><a href="#thesupport">Support</a></li>
+											<li class="uk-parent" data-uk-dropdown><a href="#">Services</a>
+												<div class="uk-dropdown uk-dropdown-navbar">
+													<ul class="uk-nav uk-nav-navbar">
+														<li><a href="index1.html">SCOM - Monitoring</a></li>
+														<li><a href="index2.html">SCCM - Patching</a></li>
+														<li><a href="index3.html">ITSM - Service Request/Incident Management</a></li>
+														<li><a href="index4.html">Azure Support - Technical Suppor</a></li>
+													</ul>
+												</div>
+											</li>
+											<!--<li class="uk-parent" data-uk-dropdown><a href="#">Elements</a>
+												<div class="uk-dropdown uk-dropdown-navbar">
+													<ul class="uk-nav uk-nav-navbar">
+														<li><a href="button.html">Button</a></li>
+														<li><a href="column.html">Column</a></li>
+														<li><a href="icon-list.html">Icon List</a></li>
+														<li><a href="icon-use.html">Icon Use</a></li>
+														<li><a href="panel.html">Panel</a></li>
+														<li><a href="tab-accordion.html">Tab &amp; Accordion</a></li>
+														<li><a href="table.html">Table</a></li>
+														<li><a href="typography.html">Typography</a></li>
+													</ul>
+												</div>
+											</li>-->
+											<li><span class="uk-badge badge-white uk-text-small thin general-color">24/7 Support (000) 000-0000</span></li>
+										</ul>
+										<a href="#mobile-nav" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+									</div>
+								</nav>
+								
+								<div id="mobile-nav" class="uk-offcanvas">
+									<div class="uk-offcanvas-bar">
+										<ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-scrollspy-nav="{closest:'li', smoothscroll:true}" data-uk-nav>
+											<li><a href="#thefeatures">Features</a></li>
+											<li><a href="#thepricing">Pricing</a></li>
+											<li><a href="#thesupport">Support</a></li>
+											<li class="uk-parent"><a href="#">Pages</a>
+												<ul class="uk-nav-sub">
+													<li><a href="index1.html">Landing Page 1</a></li>
+													<li><a href="index2.html">Landing Page 2</a></li>
+													<li><a href="index3.html">Landing Page 3</a></li>
+													<li><a href="index4.html">Landing Page 4</a></li>
+												</ul>
+											</li>
+											<li class="uk-parent"><a href="#">Elements</a>
+												<ul class="uk-nav-sub">
+													<li><a href="button.html">Button</a></li>
+													<li><a href="column.html">Column</a></li>
+													<li><a href="icon-list.html">Icon List</a></li>
+													<li><a href="icon-use.html">Icon Use</a></li>
+													<li><a href="panel.html">Panel</a></li>
+													<li><a href="tab-accordion.html">Tab &amp; Accordion</a></li>
+													<li><a href="table.html">Table</a></li>
+													<li><a href="typography.html">Typography</a></li>
+												</ul>
+											</li>
+											<li><a href="#client-area" data-uk-modal>Sign In <i class="uk-icon-sign-in"></i></a></li>
+											<li><span class="thin uk-badge badge-grey uk-text-small">24/7 Support (123) 456-7890</span></li>
+										</ul>
+									</div>
+								</div>
+								<!-- mainmenu end -->
+								
+							</div>
+							
+							<div class="uk-width-2-10 uk-width-medium-2-10 uk-hidden-small">
+							
+								<ul class="uk-navbar-nav second-nav uk-float-right">
+									<li><a href="#client-area" data-uk-modal>Sign In <i class="uk-icon-sign-in"></i></a></li>
+								</ul>
+				
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- end data-uk-sticky -->
+				
+				<!-- start header content -->
+				<div class="uk-container uk-container-center">
+					<div class="uk-grid">
+				
+						<div class="uk-width-1-1 uk-text-center uk-text-contrast">
+							<div class="header-content">
+							
+								<h1 class="uk-text-contrast uk-margin-large-bottom">Various plans for any kind business!</h1>
+								
+								<div id="header-slider2" class="uk-margin-large-top uk-slidenav-position" data-uk-slider>
+								<div class="uk-slider-container">
+								<ul class="uk-slider uk-grid uk-grid-width-large-1-4 uk-grid-width-medium-1-2">
+									<li>
+										<div class="idz-pricing-plan border">
+											<div class="idz-pricing-title">
+												<i class="uk-icon-database"></i>
+												<h4>Database <span class="thin">Hosting</span></h4>
+											</div> 
+											<div class="idz-pricing-text">
+												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											</div>                    
+											<div class="idz-pricing-button">
+												<a href="#" class="uk-button uk-button-small idz-button-blue round">view details<i class="uk-icon-chevron-right"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="idz-pricing-plan border">
+											<div class="idz-pricing-title">
+												<i class="uk-icon-linux"></i>
+												<h4>Linux <span class="thin">Support</span></h4>
+											</div> 
+											<div class="idz-pricing-text">
+												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											</div>                    
+											<div class="idz-pricing-button">
+												<a href="#" class="uk-button uk-button-small idz-button-blue round">view details<i class="uk-icon-chevron-right"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="idz-pricing-plan border">
+											<div class="idz-pricing-title">
+												<i class="uk-icon-windows"></i>
+												<h4>windows <span class="thin">Support</span></h4>
+											</div> 
+											<div class="idz-pricing-text">
+												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											</div>                    
+											<div class="idz-pricing-button">
+												<a href="#" class="uk-button uk-button-small idz-button-blue round">view details<i class="uk-icon-chevron-right"></i></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="idz-pricing-plan border">
+											<div class="idz-pricing-title">
+												<i class="uk-icon-server"></i>
+												<h4>Server <span class="thin">Hosting</span></h4>
+											</div> 
+											<div class="idz-pricing-text">
+												Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											</div>                    
+											<div class="idz-pricing-button">
+												<a href="#" class="uk-button uk-button-small idz-button-blue round">view details<i class="uk-icon-chevron-right"></i></a>
+											</div>
+										</div>
+									</li>
+								</ul>
+								
+								
+								<a href="" class="uk-slidenav uk-slidenav-previous uk-hidden-large" data-uk-slider-item="previous"></a>
+								<a href="" class="uk-slidenav uk-slidenav-next uk-hidden-large" data-uk-slider-item="next"></a>
+								
+								</div>
+								</div>
+								<!-- end #header-slider2 -->
+																
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<!-- end header content -->
+				
+        </header>
+		
+		<!-- Start section -->
+		<!--<section class="uk-padding uk-padding-small section-grey ornament">
+            <div class="uk-container uk-container-center">
+                <div class="uk-grid">
+				
+                   
+					<div class="uk-width-1-1 uk-text-center uk-margin-bottom">
+					
+						<form id="domain-search" class="uk-form">
+							<fieldset>
+								<label class="uk-h4">Find your perfect domain name</label>
+								<input placeholder="type the one you want here" type="text">
+								<select>                                    
+									<option>.com</option>
+									<option>.org</option>
+									<option>.net</option>
+									<option>.info</option>
+									<option>.biz</option>
+								</select>
+								<i class="uk-icon-chevron-down"></i>
+								<button class="uk-button">search</button>
+							</fieldset>
+						</form>-->
+						
+						<!--<div class="uk-grid uk-grid-divider uk-margin-large-top domain-inline-list">
+							<div class="uk-width-1-5 uk-width-small-1-2">
+								<a href="#"><img src="images/logo-com.png" alt="com"/></a>
+								<span class="thin uk-badge badge-grey uk-text-small">$11.99 /year</span>
+								
+							</div>
+							<div class="uk-width-1-5 uk-width-small-1-2">
+								<a href="#"><img src="images/logo-net.png" alt="net"/></a>
+								<span class="thin uk-badge badge-grey uk-text-small">$11.99 /year</span>
+							</div>
+							<div class="uk-width-1-5 uk-width-small-1-2">
+								<a href="#"><img src="images/logo-org.png" alt="org"/></a>
+								<span class="thin uk-badge badge-grey uk-text-small">$7.99 /year</span>
+							</div>
+							<div class="uk-width-1-5 uk-width-small-1-2">
+								<a href="#"><img src="images/logo-info.png" alt="info"/></a>
+								<span class="thin uk-badge badge-grey uk-text-small">$11.99 /year</span>
+							</div>
+							<div class="uk-width-1-5 uk-width-small-1-2 uk-hidden-small">
+								<a href="#"><img src="images/logo-club.png" alt="club"/></a>
+								<span class="thin uk-badge badge-grey uk-text-small">$9.95 /year</span>
+							</div>
+						</div>
+					
+					</div>
+
+                </div>
+            </div>
+        </section>-->
+		<!-- End section -->
+		
+		<!-- Start #thefeatures -->
+		<section id="thefeatures" class="uk-padding border-top">
+            <div class="uk-container uk-container-center">
+                <div class="uk-grid">
+				
+                   <div class="uk-width-3-10 uk-visible-large">
+						<img src="images/sample/server.jpg" alt="">
+					</div>
+					
+					<div class="uk-width-7-10 uk-width-medium-1-1 uk-width-small-1-1 uk-margin-large-top idz-margin-top-remove-ms idz-margin-top-remove-ss">
+					
+						<h2 class="uk-h4 withlineleft uppercase thin default-font grey">Get the hosting with ease.</h2>
+						<h3 class="uk-h2 uk-margin-top-remove">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h3>
+						
+						<div class="step-by-step uk-margin-large-top">
+						
+							<div class="uk-grid">
+							
+								<div class="uk-width-1-3 uk-width-small-1-1 uk-text-center">
+									
+									<div class="icon-wrap circle">
+										<i class="smico-www"></i>
+									</div>
+									
+									<h4>Choose domain</h4>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								
+								</div>
+								
+								<div class="uk-width-1-3 uk-width-small-1-1 uk-text-center idz-margin-top-ss idz-margin-top-remove-ms">
+									
+									<div class="icon-wrap circle">
+										<i class="smico-clipboard"></i>
+									</div>
+									
+									<h4>Hosting Plan</h4>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								
+								</div>
+								
+								<div class="uk-width-1-3 uk-width-small-1-1 uk-text-center idz-margin-top-ss idz-margin-top-remove-ms">
+									
+									<div class="icon-wrap circle">
+										<i class="smico-rocket"></i>
+									</div>
+									
+									<h4>Get online &amp; enjoy</h4>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+								
+								</div>
+							
+							</div>
+						
+						</div>
+						<!-- end step-by-step -->
+						
+					</div>
+
+                </div>
+            </div>
+        </section>
+		<!-- End #thefeatures -->
+
+		<!-- Start #thepricing -->
+        <section id="thepricing" class="uk-padding gradation">
+            <div class="uk-container uk-container-center">
+                <div class="uk-grid">
+				
+                     <div class="uk-width-1-1 uk-text-center uk-margin-bottom">
+					 
+                        <h2 class="uk-h4 withline uppercase thin default-font grey">Right size. right price.</h2>
+						<h3 class="uk-h2 uk-margin-top-remove">Start your 14-days free trial today</h3>
+						
+						<ul class="uk-grid uk-grid-match uk-grid-width-large-1-2 uk-grid-width-medium-1-2 uk-grid-width-small-1-1 idz-pricing-table uk-margin-large-top" data-uk-grid-match="{target:'.match-height'}">
+							<li>
+								<div class="idz-pricing-box uk-clearfix">
+								
+									<div class="idz-pricing-list match-height uk-float-left">
+									
+										<ul class="uk-list">
+											<li><i class="uk-icon-television general-color"></i><strong>5</strong> sites</li>
+											<li><i class="uk-icon-database general-color"></i><strong>10</strong> databases</li>
+											<li><i class="uk-icon-server general-color"></i><strong>50GB</strong> SSD storage</li>
+											<li><i class="uk-icon-dashboard general-color"></i><strong>500GB</strong> scalable bandwidth</li>
+										</ul>
+									
+									</div>
+									<div class="idz-pricing-content match-height uk-float-right">
+									
+										<h4 class="uk-text-contrast uk-text-center">Database <span class="thin">Host</span></h4>
+										
+										<div class="pricetext">
+											<span class="pricesymbol">$</span>5<span class="pricemonth">/month</span>
+										</div>
+										
+										<a href="#" class="uk-button uk-button-large idz-button-white round">order now<i class="uk-icon-chevron-right"></i></a>
+									</div>
+								
+								</div>
+							</li>
+							<li>
+								<div class="idz-pricing-box uk-clearfix">
+								
+									<div class="idz-pricing-list match-height uk-float-left">
+									
+										<ul class="uk-list">
+											<li><i class="uk-icon-television general-color"></i><strong>25</strong> sites</li>
+											<li><i class="uk-icon-database general-color"></i><strong>50</strong> databases</li>
+											<li><i class="uk-icon-server general-color"></i><strong>60GB</strong> SSD storage</li>
+											<li><i class="uk-icon-dashboard general-color"></i><strong>750GB</strong> scalable bandwidth</li>
+										</ul>
+									
+									</div>
+									<div class="idz-pricing-content match-height uk-float-right">
+									
+										<h4 class="uk-text-contrast uk-text-center">Linux <span class="thin">Support</span></h4>
+										
+										<div class="pricetext">
+											<span class="pricesymbol">$</span>15<span class="pricemonth">/month</span>
+										</div>
+										
+										<a href="#" class="uk-button uk-button-large idz-button-white round">order now<i class="uk-icon-chevron-right"></i></a>
+									</div>
+								
+								</div>
+							</li>
+							<li class="uk-margin-bottom-remove">
+								<div class="idz-pricing-box uk-clearfix">
+								
+									<div class="idz-pricing-list match-height uk-float-left">
+									
+										<ul class="uk-list">
+											<li><i class="uk-icon-television general-color"></i><strong>250</strong> sites</li>
+											<li><i class="uk-icon-database general-color"></i><strong>250</strong> databases</li>
+											<li><i class="uk-icon-server general-color"></i><strong>500GB</strong> SSD storage</li>
+											<li><i class="uk-icon-dashboard general-color"></i><strong>10TB</strong> scalable bandwidth</li>
+										</ul>
+									
+									</div>
+									<div class="idz-pricing-content match-height uk-float-right">
+									
+										<h4 class="uk-text-contrast uk-text-center">Windows <span class="thin">Support</span></h4>
+										
+										<div class="pricetext">
+											<span class="pricesymbol">$</span>29<span class="pricemonth">/month</span>
+										</div>
+										
+										<a href="#" class="uk-button uk-button-large idz-button-white round">order now<i class="uk-icon-chevron-right"></i></a>
+									</div>
+								
+								</div>
+							</li>
+							<li class="uk-margin-bottom-remove">
+								<div class="idz-pricing-box uk-clearfix">
+								
+									<div class="idz-pricing-list match-height uk-float-left">
+									
+										<ul class="uk-list">
+											<li><i class="uk-icon-television general-color"></i><strong>Unlimited</strong> sites</li>
+											<li><i class="uk-icon-database general-color"></i><strong>Unlimited</strong> databases</li>
+											<li><i class="uk-icon-server general-color"></i><strong>Unlimited</strong> SSD storage</li>
+											<li><i class="uk-icon-dashboard general-color"></i><strong>250TB</strong> scalable bandwidth</li>
+										</ul>
+									
+									</div>
+									<div class="idz-pricing-content match-height uk-float-right">
+									
+										<h4 class="uk-text-contrast uk-text-center">Server <span class="thin">Host</span></h4>
+										
+										<div class="pricetext">
+											<span class="pricesymbol">$</span>49<span class="pricemonth">/month</span>
+										</div>
+										
+										<a href="#" class="uk-button uk-button-large idz-button-white round">order now<i class="uk-icon-chevron-right"></i></a>
+									</div>
+								
+								</div>
+							</li>
+						</ul>
+						
+                    </div>
+					
+                </div>
+            </div>
+        </section>
+		<!-- End #thepricing -->
+
+        <!-- Start section -->
+		<section class="uk-margin-bottom" data-uk-parallax="{media:'(min-width: 1200px)', bg: '-200,0'}" style="background-image: url(images/sample/bg-parallax2.jpg);">
+		
+				<div class="uk-container uk-container-center uk-padding-large">
+					<div class="uk-grid">
+					
+						<div class="uk-width-6-10 uk-width-medium-1-1 uk-width-small-1-1 uk-text-contrast uk-margin-large-top idz-margin-top-remove-ls idz-margin-top-remove-ms idz-margin-top-remove-ss">
+						
+							<h2 class="uk-text-contrast withlineleft">
+								<span class="ht1 uk-margin-bottom">Your perfect website</span>
+								<span class="ht2 letterminus">Ready in an instant !</span>
+							</h2>
+							
+							<ul class="uk-list idz-list-check thecolor">
+								<li><span class="general-color bold">Simple:</span> No experience necessary</li>
+								<li><span class="general-color bold">All-Inclusive:</span> Internet address, Google optimization, and more</li>
+								<li><span class="general-color bold">Unique:</span> 20 million+ design templates for your industry</li>
+							</ul>
+							
+						</div>
+						
+						<div class="uk-width-4-10 uk-width-medium-1-1 uk-width-small-1-1 idz-margin-top-ss">
+						
+							<div class="uk-panel uk-panel-box idz-panel idz-panel-large-padding idz-panel-with-icon white uk-text-center">
+							
+								<div class="icon-bg"><i class="uk-icon-ticket"></i></div>
+							
+								<h3 class="default-font darkgrey"><span class="bold">Promo</span> <span class="thin">this month!</span></h3>
+								
+								<div class="price-box">
+								
+									<div class="price-large general-color">
+										<span class="dollartext">$</span>2.99<span class="monthtext">/month</span>
+									</div>
+									
+									<p class="uppercase lightgrey uk-margin-top-remove">Regulary <del>$5.00</del></p>
+									
+									<a href="#" class="uk-button uk-button-large idz-button-blue round uk-margin-small-top">Get the coupon code<i class="uk-icon-chevron-right"></i></a>
+								
+								</div>
+								
+								
+								
+							</div>
+						
+						</div>
+						
+					</div>
+				</div> 
+                        
+        </section>
+		<!-- End section -->
+		
+		<!-- Start #thesupport -->
+		<section id="thesupport" class="uk-padding">
+			<div class="uk-container uk-container-center">
+				<div class="uk-grid uk-grid-divider">
+				
+					<div class="uk-width-1-3 uk-width-small-1-1">
+					
+					   <i class="uk-icon-comment icon-large general-color uk-margin-small-bottom"></i>
+					   <h4 class="uk-margin-top uk-margin-small-bottom">Live Chat</h4>
+					   <div class="txt14 italic uk-text-muted uk-margin-bottom">24 / 7 / 365 Availability</div>
+					   <p>Atero eos et accusamus et iustom odio ducimusa et quima blanditiis.</p>
+					   <a href="#" class="learn-button">Chat now <i class="uk-icon-chevron-right"></i></a>
+					   
+					</div>
+					
+					<div class="uk-width-1-3 uk-width-small-1-1 idz-margin-top-ss idz-margin-top-remove-ms">
+					
+					   <i class="uk-icon-share-square-o icon-large general-color uk-margin-small-bottom"></i>
+					   <h4 class="uk-margin-top uk-margin-small-bottom">Open a Ticket</h4>
+					   <div class="txt14 italic uk-text-muted uk-margin-bottom">We'll reply as faster we can</div>
+					   <p>Atero eos et accusamus et iustom odio ducimusa et quima blanditiis.</p>
+					   <a href="#" class="learn-button">New ticket <i class="uk-icon-chevron-right"></i></a>
+					   
+					</div>
+					
+					<div class="uk-width-1-3 uk-width-small-1-1 idz-margin-top-ss idz-margin-top-remove-ms">
+					
+					   <i class="uk-icon-question-circle icon-large general-color uk-margin-small-bottom"></i>
+					   <h4 class="uk-margin-top uk-margin-small-bottom">Faq’s Questions</h4>
+					   <div class="txt14 italic uk-text-muted uk-margin-bottom">Search answers to your questions</div>
+					   <p>Atero eos et accusamus et iustom odio ducimusa et quima blanditiis.</p>
+					   <a href="#" class="learn-button">See faq's <i class="uk-icon-chevron-right"></i></a>
+					   
+					</div>
+
+					
+				</div>
+			</div>
+        </section>
+		<!-- Start #thesupport -->
+		
+		<!-- Start Before Footer -->
+        <section id="before-footer" class="section-blue uk-text-contrast uk-margin-top">
+            <div class="uk-container uk-container-center">
+                <div class="uk-grid">
+                   
+						
+						<div class="uk-width-6-10 uk-width-medium-1-1 uk-width-small-1-1">
+				
+							<div class="uk-grid">
+							
+								<div class="uk-width-1-2 uk-width-small-1-1">
+									<h4 class="uk-text-contrast">India</h4>
+ 
+									<p class="txt14 uk-margin-remove"><i class="uk-icon-map-marker uk-margin-right icon-xx-small"></i>Unit F2,First Floor, Plot No.6,</p>
+									<p class="txt14 uk-margin-remove"><i class="uk-icon-envelope-o uk-margin-right icon-xx-small"></i>Signature Tower, Ansal IT City Park (SEZ)</p>
+									<p class="txt14 uk-margin-remove"><i class="uk-icon-envelope-o uk-margin-right icon-xx-small"></i>Tech Zone, IT Parks, Greater Noida, UP-201308</p>
+								</div>
+								
+								<!--<div class="uk-width-1-2 uk-width-small-1-1 idz-margin-top-ss idz-margin-top-remove-ms">
+									<h4 class="uk-text-contrast">Indonesia</h4>
+									<p class="txt14 uk-margin-remove"><i class="uk-icon-map-marker uk-margin-right icon-xx-small"></i>Raya Pajajaran No.17 , Bogor 16143</p>
+									<p class="txt14 uk-margin-remove"><i class="uk-icon-envelope-o uk-margin-right icon-xx-small"></i>id-server@vortexhost.com</p>
+								</div>-->
+								
+							</div>
+					
+						</div>
+						
+
+						<div class="uk-width-4-10 uk-width-medium-1-1 uk-width-small-1-1 idz-margin-top-ms">
+							
+							<div class="uk-grid uk-grid-medium">
+								<div class="uk-width-1-2 uk-width-small-1-1  idz-margin-top-ss idz-margin-top-remove-ms">
+									<div class="uk-panel panel-soc">
+									
+										<a href="#">
+											<i class="uk-icon-facebook-official soc-icon uk-margin-right"></i>
+											<div class="uk-nbfc">
+												<span class="soc-text1">check out our</span><span class="soc-text2">Facebook</span>
+											</div>
+										</a>
+									
+									</div>
+								</div>
+								<div class="uk-width-1-2 uk-width-small-1-1">
+									<div class="uk-panel panel-soc">
+									
+										<a href="#">
+											<i class="uk-icon-twitter soc-icon uk-margin-right"></i>
+											<div class="uk-nbfc">
+												<span class="soc-text1">check out our</span><span class="soc-text2">Twitter</span>
+											</div>
+										</a>
+									
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+                </div>
+            </div>    
+        </section>
+		<!-- End Before Footer -->
+
+        <!-- Start Footer -->
+		<footer id="footer">
+            <div class="uk-container uk-container-center">
+                <div class="uk-grid">
+                    <div class="uk-width-6-10 uk-width-medium-6-10 uk-width-small-1-1">
+						<ul class="uk-list footer-menu">
+							<li class="logo-footer"><a href="#"><img src="images/logo-footer.svg" alt="Vortex"/></a></li>
+							<li><a href="#">Resources</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Contact</a></li>
+							<li><a href="#">Blog</a></li>
+						</ul>
+					</div>
+					<div class="uk-width-4-10 uk-width-medium-4-10 uk-width-small-1-1 uk-text-right">
+						<p class="copyright">&copy; Copyright 2016. All Rights Reserved.</p>
+					</div>
+                </div>
+            </div>
+            <a href="#top" class="to-top uk-icon-chevron-up" data-uk-smooth-scroll></a>    
+        </footer>
+		<!-- End Footer -->
+
+        <!-- Javascript -->
+        <script src="js/jquery.js"></script>
+        <script src="js/uikit.min.js"></script> 
+		<script src="js/components/slider.js"></script>
+        <script src="js/components/parallax.js"></script>
+        <script src="js/components/sticky.js"></script>
+        <script src="js/config.js"></script>
+    </body>
+</html>

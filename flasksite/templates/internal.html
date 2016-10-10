@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr">
+
+  <head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HMA</title>
+  <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon-precomposed" href="../static/images/apple-touch-icon.png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,400italic,300italic" rel="stylesheet" type="text/css">
+	
+  <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- CSS -->
+  <link rel="stylesheet" href="../static/css/uikit.css">
+  <link rel="stylesheet" href="../static/css/components/small-icon.css">        
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/mediaquery.css">
+  <link rel="stylesheet" href="../static/css/sweetalert2.css">        
+<script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+
+<script src="../static/js/sweetalert2.min.js"></script>
+  <script>
+    function getCheckedCheckboxesFor(checkboxName) {
+        var checkboxes = document.querySelectorAll('input[name="' + checkboxName + '"]:checked'), values = [];
+	alert(checkboxes);
+        Array.prototype.forEach.call(checkboxes, function (el) {
+            values.push(el.value);
+        });
+        return values;
+    }
+  </script>
+
+
+</head>
+
+<body class="layout2">
+
+  <header id="header" class="header-inner">
+
+    <!-- sign in modal begin -->
+    <div id="client-area" class="uk-modal">
+      <div class="uk-modal-dialog">
+        <ul id="client-area-tab" class="uk-tab uk-tab-grid" data-uk-tab="{connect:'#account'}">
+          <!--<li class="uk-active uk-width-1-2"><a href="">Sign in</a></li>-->
+          <li class="uk-width-1-2"><a href="">New account</a></li>
+        </ul>
+
+        <ul id="account" class="uk-switcher uk-margin">
+          <li>
+            <form id="signin-account" class="uk-form">
+              <fieldset>
+                <div class="uk-form-icon">
+                  <i class="uk-icon-envelope"></i>
+                  <input type="text" placeholder="Email">
+                </div>                                                    
+                <div class="uk-form-icon">
+                  <i class="uk-icon-key"></i>
+                  <input type="text" placeholder="Password">
+                </div>
+                <label><input type="checkbox">Remember me</label>
+                <a href="client-area.html" class="uk-button uk-button-small idz-button-blue uk-width-1-1">Login</a>
+
+              </fieldset>
+            </form>
+          </li>
+
+          <li>
+            <form id="create-account" class="uk-form">
+              <fieldset>
+                <div class="uk-form-icon">
+                  <i class="uk-icon-user"></i>
+                  <input type="text" placeholder="Username">
+                </div>
+                <div class="uk-form-icon">
+                  <i class="uk-icon-envelope"></i>
+                  <input type="text" placeholder="Email">
+                </div>                                                    
+                <div class="uk-form-icon">
+                  <i class="uk-icon-key"></i>
+                  <input type="text" placeholder="Password">
+                </div>
+                <label><input type="checkbox">I agree to the <a href="#">Terms</a></label>
+                <a href="client-area.html" class="uk-button uk-button-small idz-button-blue uk-width-1-1">Create account</a>
+              </fieldset>
+            </form>
+          </li>
+        </ul>
+        <div class="uk-modal-caption">
+          <a href="#">Forgot your password?</a>
+        </div>
+      </div>
+    </div>
+    <!-- sign in modal end -->
+
+    <!-- start data-uk-sticky -->
+    <div data-uk-sticky="{media:'(min-width: 1024px)', top:-300, animation:'uk-animation-slide-top'}">
+      <div class="uk-container uk-container-center">
+        <div class="uk-grid">
+
+          <div class="uk-width-8-10 uk-width-medium-8-10 uk-width-small-1-1">
+
+            <!-- main logo begin -->
+            <div id="logo">
+              <a href="index.html"><img src="../static/images/logo.svg" alt="vortex"/></a>
+            </div>
+
+            <!-- main logo end -->
+
+            <!-- mainmenu begin -->
+            <!--<nav id="mainmenu" class="uk-navbar">
+              <div class="uk-navbar-flip">
+                <ul class="uk-navbar-nav uk-hidden-small">
+                  <li class="uk-parent" data-uk-dropdown><a href="index.html">Pages</a>
+                    <div class="uk-dropdown uk-dropdown-navbar">
+                      <ul class="uk-nav uk-nav-navbar">
+                        <li><a href="index1.html">Landing Page 1</a></li>
+                        <li><a href="index2.html">Landing Page 2</a></li>
+                        <li><a href="index3.html">Landing Page 3</a></li>
+                        <li><a href="index4.html">Landing Page 4</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="uk-parent" data-uk-dropdown><a href="#">Elements</a>
+                    <div class="uk-dropdown uk-dropdown-navbar">
+                      <ul class="uk-nav uk-nav-navbar">
+                        <li><a href="button.html">Button</a></li>
+                        <li><a href="column.html">Column</a></li>
+                        <li><a href="icon-list.html">Icon List</a></li>
+                        <li><a href="icon-use.html">Icon Use</a></li>
+                        <li><a href="panel.html">Panel</a></li>
+                        <li><a href="tab-accordion.html">Tab &amp; Accordion</a></li>
+                        <li><a href="table.html">Table</a></li>
+                        <li><a href="typography.html">Typography</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li><span class="uk-badge badge-transparent uk-text-small thin general-color">24/7 Support (123) 456-7890</span></li>
+                </ul>
+                <a href="#mobile-nav" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+              </div>
+            </nav>-->
+
+            <div id="mobile-nav" class="uk-offcanvas">
+              <div class="uk-offcanvas-bar">
+                <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+                  <li class="uk-parent"><a href="#">Pages</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="index1.html">Landing Page 1</a></li>
+                      <li><a href="index2.html">Landing Page 2</a></li>
+                      <li><a href="index3.html">Landing Page 3</a></li>
+                      <li><a href="index4.html">Landing Page 4</a></li>
+                    </ul>
+                  </li>
+                  <li class="uk-parent"><a href="#">Elements</a>
+                    <ul class="uk-nav-sub">
+                      <li><a href="button.html">Button</a></li>
+                      <li><a href="column.html">Column</a></li>
+                      <li><a href="icon-list.html">Icon List</a></li>
+                      <li><a href="icon-use.html">Icon Use</a></li>
+                      <li><a href="panel.html">Panel</a></li>
+                      <li><a href="tab-accordion.html">Tab &amp; Accordion</a></li>
+                      <li><a href="table.html">Table</a></li>
+                      <li><a href="typography.html">Typography</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- mainmenu end -->
+          </div>
+
+          <div class="uk-width-2-10 uk-width-medium-2-10 uk-hidden-small">
+
+            <ul class="uk-navbar-nav second-nav uk-float-right">
+		<li><b style="margin-left:-40px;color:#fff;">Login As :</b><a href="#client-area" data-uk-modl  style="margin-top: -32px; float: right;cursor:pointer;"><i style="cursor:pointer;">{{ session_val }}</i></a></li>
+		  <a href ="/logout" style="color:#fff;"><!--<input type="button" onclick="alert(getCheckedCheckboxesFor('services'));" value="Submit" />-->Logout</a>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- end data-uk-sticky -->
+
+    <div class="uk-container uk-container-center">
+      <div class="uk-grid">
+
+        <div class="uk-width-1-1 uk-text-center">
+          <h1 class="pagetitle">Services</h1>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Start Content -->
+  <section class="uk-padding">
+    <div class="uk-container uk-container-center">
+
+
+      <!--<input type="checkbox" id="checkAll">Check All
+    <hr />
+     <input name="services" type="checkbox" value="Mark"/>
+    <input name ="services" type="checkbox" id="checkItem" value="base">
+      <input type="button" onclick="alert(getCheckedCheckboxesFor('services'));" value="Get Values" />-->
+<div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">Services</a></li>
+    <li><a href="#tabs-2">service-Info</a></li>
+  </ul>
+    <div id="tabs-1">
+
+      <div class="uk-grid uk-margin-large-bottom">
+        <!--<div class="uk-width-1-1 uk-margin-bottom">
+          <h3>Services</h3>
+        </div>-->
+        <div class="uk-width-1-2 uk-width-medium-1-1 uk-width-small-1-1 uk-margin-medium-bottom">
+          <table id="services-table" class="uk-table uk-table-striped idz-table-green">
+            <thead>
+		<input type="hidden" id="session_user" value="{{ session_val }}" />
+              <tr>
+                <th><a href="#">All</a></th>
+                <th><input id="checkboxall" name="checkboxall" type="checkbox"/></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Basics</td>
+                <td> <input name="services" type="checkbox" value="basics"/></td>
+              </tr>
+              <tr>					
+                <td>Monitoring</td> 
+                <td> <input name="services" type="checkbox" value="monitoring"/></td>
+              </tr>
+              <tr>
+                <td>Patching</td>
+                <td> <input name="services" type="checkbox" value="patching"/></td>
+              </tr>
+
+              <tr>					
+                <td>Backup</td>
+                <td> <input name="services" type="checkbox" value="backup"/></td>
+              </tr>
+
+              <tr>					
+                <td>Anti-virus</td>
+                <td> <input name="services" type="checkbox" value="anti"/></td>
+              </tr>
+              <tr>
+                <td colspan="2"><input type="button" onclick="getCheckedCheckboxesFor();" value="Submit" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  </div>
+      </div>
+
+<div id="tabs-2">
+<div class="uk-grid uk-margin-large-bottom">
+        <!--<div class="uk-width-1-1 uk-margin-bottom">
+          <h3>Services</h3>
+        </div>-->
+        <div class="uk-width-1-2 uk-width-medium-1-1 uk-width-small-1-1 uk-margin-medium-bottom">
+          <table id="services-table" class="uk-table uk-table-striped idz-table-green">
+            <thead>
+		<input type="hidden" id="session_user" value="{{ session_val }}" />
+              <tr>
+                <th><a href="#">S.no</a></th>
+                <th><a href="#">services</a></th>
+                <th><a href="#">Date</a></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!--<tr>					
+                <td>Monitoring</td> 
+                <td>Patching</td>
+                <td>Patching</td>
+              </tr>
+              <tr>
+                <td>Patching</td>
+              </tr>
+
+              <tr>					
+                <td>Backup</td>
+              </tr>-->
+              <!--<tr>					
+                <td>Anti-virus</td>
+              </tr>-->
+		<tr>					
+                <td colspan="3" style="text-align:center;">Inprogress</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+  </div>
+
+
+  </div>
+    </div>
+  </section>-->
+  <!-- End Content -->
+
+  <!-- Start Footer -->
+  <footer id="footer">
+    <div class="uk-container uk-container-center">
+      <div class="uk-grid">
+        <div class="uk-width-6-10 uk-width-medium-6-10 uk-width-small-1-1">
+          <ul class="uk-list footer-menu">
+            <li class="logo-footer"><a href="#"><img src="../static/images/logo-footer.svg" alt="Vortex"/></a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="uk-width-4-10 uk-width-medium-4-10 uk-width-small-1-1 uk-text-right">
+          <p class="copyright">&copy; Copyright 2016. offc1l Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+    <a href="#top" class="to-top uk-icon-chevron-up" data-uk-smooth-scroll></a>    
+  </footer>
+  <!-- End Footer -->
+
+  <!-- Javascript -->
+  <!--<script src="../static/js/jquery.js"></script>-->
+  <script src="../static/js/uikit.min.js"></script> 
+  <script src="../static/js/components/sticky.js"></script>
+  <script src="../static/js/config.js"></script>
+  <script type="text/javascript">
+                  function getCheckedCheckboxesFor() {
+                      var selectedServ = [];
+                      $('#services-table tbody input:checked').each(function () {
+                          selectedServ.push($(this).attr('value'));
+                      });
+			get_session_user = $('#session_user').val();
+			
+                      if (selectedServ.length > 0) {
+                          console.log(selectedServ);
+                          $.ajax({
+                              dataType: 'json',
+                              url: "/hma/portal/services/?username='"+get_session_user+"'&services=" + selectedServ,
+                              beforeSend: function () {
+                                  //$('#ajaxloader').show();
+                              }
+                          }).done(function (response) {
+			  if(response['status'] == 'true')
+                        	{
+                 			swal({
+                        		type: "success",
+                        		html: response['msg']
+                 		});
+                        	}
+                        else{
+                 		swal({
+                        	type: "error",
+                        	html: response['msg']
+                		});
+                         }
+                              console.log(response);
+                              //$('#ajaxloader').hide();
+                          }).fail(function (jqxhrFail, textStatusFail, errorThrownFail) {
+                              //errorHandler(jqxhrFail);
+                          });
+
+                      	} else {
+					swal({
+                        		type: "warning",
+                        		html: "Please select at least one service!"
+                 		});
+                          return false;
+                      }
+                  }
+
+                  $(function () {
+                      $("#services-table #checkboxall").change(function () {
+                          var status = this.checked;
+                          $('#services-table tbody input[type=checkbox]').prop("checked", status);
+                      });
+
+                      //Select/Deselect select all checkboxe
+                      $("#services-table tbody input[type=checkbox]").change(function () {
+                          var checkbox = "#services-table tbody input[type=checkbox]";
+                          if ($(checkbox + ':checked').length === $(checkbox).length) {
+                              $('#checkboxall').prop('checked', true);
+                          } else {
+                              $('#checkboxall').prop('checked', false);
+                          }
+                      });
+                  });
+  </script>
+</body>
+</html>
+
