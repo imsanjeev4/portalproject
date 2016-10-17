@@ -69,6 +69,14 @@ def services():
     status = modules.services(username,values)
 
     return flask.Response(json.dumps(status), mimetype='application/json')
+
+@app.route('/hma/portal/GetInformation/')
+def GetInformation():
+    username = flask.request.args.get('username')
+    status = modules.GetInformation(username)
+
+    return flask.Response(json.dumps(status), mimetype='application/json')
+
 @app.route('/tab-page.html')
 def tab():
     #sumSessionCounter()
