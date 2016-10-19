@@ -274,7 +274,7 @@
           <h3>Services</h3>
         </div>-->
         <div class="uk-width-1-2 uk-width-medium-1-1 uk-width-small-1-1 uk-margin-medium-bottom">
-          <table id="services-info" class="uk-table uk-table-striped idz-table-green" style="width:1032px;">
+          <table id="services-table" class="uk-table uk-table-striped idz-table-green">
             <thead>
 		<input type="hidden" id="session_user" value="{{ session_val }}" />
               <tr>
@@ -284,6 +284,25 @@
               </tr>
             </thead>
             <tbody>
+              <!--<tr>					
+                <td>Monitoring</td> 
+                <td>Patching</td>
+                <td>Patching</td>
+              </tr>
+              <tr>
+                <td>Patching</td>
+              </tr>
+
+              <tr>					
+                <td>Backup</td>
+              </tr>-->
+              <!--<tr>					
+                <td>Anti-virus</td>
+              </tr>-->
+		<tr>					
+                <td colspan="3" style="text-align:center;">Inprogress</td>
+              </tr>
+
             </tbody>
           </table>
         </div>
@@ -345,7 +364,6 @@
                         		type: "success",
                         		html: response['msg']
                  		});
-				setInterval(function(){ ServiceInfo() }, 3000);
                         	}
                         else{
                  		swal({
@@ -384,75 +402,7 @@
                           }
                       });
                   });
-
-
-/* GetInformation */
-
-function ServiceInfo() {
-      var selectedServ = [];
-      $('#services-table tbody input:checked').each(function () {
-	  selectedServ.push($(this).attr('value'));
-      });
-	get_session_user = $('#session_user').val();
-      if (get_session_user !='') {
-	  console.log(selectedServ);
-	  $.ajax({
-	      dataType: 'json',
-	      url: "/hma/portal/GetInformation/?username="+get_session_user,
-	      beforeSend: function () {
-		  //$('#ajaxloader').show();
-	      }
-	  }).done(function (response) {
-	html='';
-	if(response['status'] == 'true'){
-	if(response.data.length > 0){
-		$.each(response.data, function (key, value) {
-		html += '<tr id="' + value.id + '">';
-		html += "<td>" + value.id + "</td>";
-		html += "<td>" + value.services + "</td>";
-		html += "<td>" + value.date + "</td>";
-		html += "</tr>";
-		});
-	}
-	else{
-
-		html += '<tr>';
-		html += "<td colspan='3' style='text-align:center;'>No information is available</td>";
-		html += "</tr>";
-	}
-	
-	$("#services-info tbody").html(html);}
-	else{
-		swal({
-		type: "error",
-		html: response['msg']
-		});
-	 }
-	      console.log(response);
-	      //$('#ajaxloader').hide();
-	  }).fail(function (jqxhrFail, textStatusFail, errorThrownFail) {
-	      //errorHandler(jqxhrFail);
-	  });
-
-	} else {
-			swal({
-			type: "warning",
-			html: "Please select at least one service!"
-		});
-	  return false;
-      }
-	  }
-
-
-
-/* End */
-$( document ).ready(function() {
-    console.log( "ready!" );
-    ServiceInfo();
-});
-
   </script>
-
 </body>
 </html>
 

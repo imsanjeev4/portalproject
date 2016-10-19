@@ -48,9 +48,6 @@ def home():
     if session_get == None:
     	return render_template("index.html")
     else:	
-    	msg1 = [{"msg":'hi','msg_val':'sanjeev'}]
-    	#msg1 = ['msg','hi','msg_val','sanjeev']
-    	#return render_template("internal.html",msg=msg1)
     	return render_template("internal.html",msg=msg1,session_val=session_get)
 
 @app.route('/logout')
@@ -67,14 +64,12 @@ def services():
         return flask.abort(404, "Usage /hma/portal/sevices/")
     service_list = values.split(",") # change string in list of checkbox values
     status = modules.services(username,values)
-
     return flask.Response(json.dumps(status), mimetype='application/json')
 
-@app.route('/hma/portal/GetInformation/')
+@app.route('/hma/portal/GetInformation/',methods=['GET', 'POST'])
 def GetInformation():
     username = flask.request.args.get('username')
     status = modules.GetInformation(username)
-
     return flask.Response(json.dumps(status), mimetype='application/json')
 
 @app.route('/tab-page.html')
