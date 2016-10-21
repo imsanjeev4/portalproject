@@ -1,6 +1,6 @@
 import modules
 import sys
-sys.path.append('/root/flasksite/modules/')
+sys.path.append('/data/portalproject/flasksite/modules/')
 import db_connect
 import hashlib
 def register(first,last,email,password):

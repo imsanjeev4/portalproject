@@ -15,8 +15,6 @@ app.secret_key = 'F12Zr47j\3yX R~X@H!jmM]Lwf/,?KT'
 def index():
     #sumSessionCounter()
     return render_template("index.html")
-   # msg1 = {"msg":'hi sanjeev'}
-   # return render_template("internal.html",msg=msg1)
 
 @app.route('/hma/portal/Signin/',methods=['GET', 'POST'])
 def Signin():
@@ -40,7 +38,7 @@ def register():
     status = modules.register(first,last,email,password)
     return flask.Response(json.dumps(status), mimetype="application/json")
 
-@app.route('/internal.html')
+@app.route('/service.html')
 def home():
     #sumSessionCounter()
     #-------Get Session value------	
@@ -48,7 +46,7 @@ def home():
     if session_get == None:
     	return render_template("index.html")
     else:	
-    	return render_template("internal.html",msg=msg1,session_val=session_get)
+    	return render_template("service.html",session_val=session_get)
 
 @app.route('/logout')
 def logout():

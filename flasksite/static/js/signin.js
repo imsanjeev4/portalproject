@@ -47,7 +47,7 @@ $(function () {
                         type: "success",
                         html: response['msg']
                  });  
-			location.href = '/internal.html';
+			location.href = '/service.html';
 			}
 			else{
 		 swal({ 
